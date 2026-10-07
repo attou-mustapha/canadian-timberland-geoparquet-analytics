@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canadian-timberland-geoparquet-analytics"
+version = "0.1.0"
+description = "Cloud-Native GeoParquet and DuckDB Spatial Analytics Pipeline for Canadian Forestry & Canopy Data"
+readme = "README.md"
+authors = [
+    { name = "Mustapha ATTOU", email = "mustapha.attou@example.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "duckdb>=0.10.0",
+    "geopandas>=0.14.0",
+    "pyarrow>=14.0.0",
+    "shapely>=2.0.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "psutil>=5.9.0",
+    "requests>=2.31.0",
+    "pydantic>=2.5.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "matplotlib>=3.8.0",
+    "black>=23.9.0"
+]
+
+[project.scripts]
+timberland-analytics = "timberland_analytics.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+env/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Data
+data/raw/*
+!data/raw/.gitkeep
+data/parquet/*
+!data/parquet/.gitkeep
+*.parquet
+*.parquet.tmp
+*.duckdb
+*.duckdb.wal
+
+# Benchmarks & Results
+benchmarks/results/*.json
+benchmarks/results/*.png
+
+# IDE & OS
+.env
+.vscode/
+.idea/
+.DS_Store
