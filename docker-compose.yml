@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  analytics-engine:
+    build: .
+    container_name: timberland_duckdb_runner
+    volumes:
+      - ./data:/app/data
+      - ./benchmarks:/app/benchmarks
+    command: ["python", "-m", "timberland_analytics.cli", "--help"]
